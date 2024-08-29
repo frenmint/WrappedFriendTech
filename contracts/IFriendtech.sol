@@ -14,5 +14,5 @@ interface IFriendtech {
 
     function buyShares(address sharesSubject, uint256 amount) external payable;
 
-    function sellShares(address sharesSubject, uint256 amount) external;
+    function sellShares(address sharesSubject, uint256 amount) external payable;
 }

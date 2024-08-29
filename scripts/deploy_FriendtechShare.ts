@@ -5,11 +5,11 @@ import { ethers } from 'hardhat'
 async function main() {
     // Retrieve the first signer, typically the default account in Hardhat, to use as the deployer.
     const [deployer] = await ethers.getSigners()
-    const WrappedFriendtech = await ethers.getContractFactory("WrappedFriendtech");
-    const wrappedFriendtech = await WrappedFriendtech.deploy(deployer);
-    await wrappedFriendtech.waitForDeployment();
-    console.log(`wrappedFriendtech contract is deployed. Contract address: ${wrappedFriendtech.target}`)
-
+    
+    const instance = await ethers.getContractFactory('FriendtechSharesV1');
+    const FriendtechSharesV1 = await instance.deploy();
+    await FriendtechSharesV1.waitForDeployment();
+    console.log(`FriendtechSharesV1 contract is deployed. Contract address: ${FriendtechSharesV1.target}`)
     
 }
 
