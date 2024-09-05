@@ -19,10 +19,9 @@ contract WrappedFriendtech is Ownable, ERC1155 {
     // Used when converting token IDs to hex strings in `uri`.
     uint256 private constant _ADDR_BYTE_LENGTH = 20;
 
-    // Official Friendtech contract: https://basescan.org/address/0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4.
-    // Friendtech contract on Base Sepolia: https://sepolia.basescan.org/address/0xCa3908C45A90006Be94386F1f01ca6de7BC695De
+    // Official Friendtech contract: https://basescan.org/address/0xCF205808Ed36593aa40a44F10c7f7C2F67d4A4d4.
     IFriendtech public constant FRIENDTECH =
-        IFriendtech(0xCa3908C45A90006Be94386F1f01ca6de7BC695De);
+        IFriendtech(0xCF205808Ed36593aa40a44F10c7f7C2F67d4A4d4);
 
     mapping(uint256 => string) tokenURI;
 
